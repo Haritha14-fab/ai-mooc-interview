@@ -1,0 +1,101 @@
+.result-layout { max-width: 980px; }
+
+.result-summary,
+.report-section {
+    border: 1px solid #dfe7ef;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 10px 32px rgba(18, 42, 67, 0.055);
+}
+
+.result-summary { padding: 34px; border-top: 4px solid #2b8a62; }
+.result-summary.result-needs-retake { border-top-color: #d58b29; }
+
+.result-summary-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.result-summary h1 { margin: 0 0 10px; color: #15253d; font-size: clamp(1.7rem, 4vw, 2.35rem); font-weight: 750; }
+.result-description { max-width: 620px; margin: 0; color: #5d6b7c; line-height: 1.65; }
+
+.score-medallion {
+    display: flex;
+    width: 132px;
+    height: 132px;
+    flex: 0 0 132px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #e7f3ed;
+    border-radius: 50%;
+    color: #226a4c;
+    background: #f4faf6;
+}
+
+.result-needs-retake .score-medallion { border-color: #fbf0db; color: #9a5a0e; background: #fffaf1; }
+.score-medallion strong { font-size: 2rem; line-height: 1; }
+.score-medallion strong span { font-size: 1.15rem; }
+.score-medallion small { margin-top: 8px; color: #667487; font-size: 0.76rem; }
+
+.result-metadata {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px 22px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid #e5ebf1;
+}
+
+.result-metadata div { display: flex; flex-direction: column; gap: 5px; }
+.result-metadata span { color: #718093; font-size: 0.76rem; font-weight: 650; text-transform: uppercase; letter-spacing: 0.06em; }
+.result-metadata strong { color: #1d3048; font-size: 0.95rem; font-weight: 650; }
+
+.lock-notice,
+.retake-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    padding: 13px 15px;
+    border-radius: 9px;
+    background: #edf4fa;
+    color: #285a83;
+    font-size: 0.9rem;
+}
+
+.retake-notice { background: #fff6e8; color: #895519; }
+.report-section { margin-top: 20px; padding: 28px 32px; }
+.report-section .section-heading-row { margin-bottom: 20px; }
+.report-section .section-heading-row h2 { margin: 0; font-size: 1.38rem; }
+.feedback-copy { margin: 0; color: #42536a; line-height: 1.75; white-space: pre-line; }
+.feedback-icon { color: #3374aa; font-size: 1.35rem; }
+
+.question-result { padding: 22px 0; border-top: 1px solid #e8edf2; }
+.question-result:first-of-type { border-top: 0; }
+.question-result-heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 11px; }
+.question-result-heading > span:first-child { color: #54708d; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.answer-status { padding: 4px 10px; border-radius: 999px; font-size: 0.76rem; font-weight: 700; }
+.answer-correct { color: #226a4c; background: #e8f5ed; }
+.answer-incorrect { color: #8b5b13; background: #fff4df; }
+.question-result h3 { margin: 0 0 15px; color: #1d3048; font-size: 1rem; line-height: 1.65; font-weight: 650; }
+.question-result > p { display: grid; grid-template-columns: 145px 1fr; gap: 14px; margin: 8px 0; color: #43546a; line-height: 1.55; font-size: 0.9rem; }
+.question-result > p strong { color: #253a54; }
+.question-explanation { margin-top: 14px !important; padding: 13px; border-radius: 8px; background: #f5f8fb; }
+.report-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 22px 0 40px; }
+.report-actions .btn { min-height: 42px; }
+.result-error { max-width: 760px; padding-top: 50px; }
+
+@media (max-width: 680px) {
+    .result-summary { padding: 24px 20px; }
+    .result-summary-top { align-items: flex-start; flex-direction: column-reverse; gap: 18px; }
+    .score-medallion { width: 102px; height: 102px; flex-basis: 102px; border-width: 6px; }
+    .score-medallion strong { font-size: 1.7rem; }
+    .result-metadata { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .report-section { padding: 22px 18px; }
+    .question-result > p { grid-template-columns: 1fr; gap: 3px; }
+    .report-actions { align-items: stretch; flex-direction: column; }
+    .report-actions .btn { width: 100%; }
+}

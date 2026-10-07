@@ -1,0 +1,17 @@
+.difficulty-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.difficulty-choice { position: relative; min-height: 220px; padding: 25px 25px 23px; border: 1px solid #dfe7ef; border-radius: 13px; background: #fff; box-shadow: 0 8px 26px rgba(18, 42, 67, 0.045); }
+.difficulty-number { display: inline-grid; width: 38px; height: 38px; place-items: center; border-radius: 9px; color: #245d8e; background: #edf5fb; font-size: 0.82rem; font-weight: 750; }
+.difficulty-level-2 { color: #24715e; background: #ebf6f1; }
+.difficulty-level-3 { color: #946122; background: #fbf3e4; }
+.difficulty-level-4 { color: #8c4f48; background: #fbefed; }
+.difficulty-choice h2 { margin: 17px 0 8px; color: #1d3048; font-size: 1.25rem; font-weight: 700; }
+.difficulty-choice p { min-height: 43px; margin: 0 0 18px; color: #69788a; font-size: 0.9rem; line-height: 1.55; }
+.difficulty-choice .btn { min-width: 170px; }
+.selection-back-link { margin-top: 26px; }
+.selection-back-link a { color: #536b82; font-size: 0.88rem; text-decoration: none; }
+.selection-back-link a:hover { color: #1a5490; text-decoration: underline; }
+
+@media (max-width: 640px) {
+    .difficulty-grid { grid-template-columns: 1fr; }
+    .difficulty-choice { min-height: 0; }
+}
